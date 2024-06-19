@@ -1,0 +1,13 @@
+---
+aliases: ['DEEP-CANYON', 'Deep Canyon']
+tags: [room]
+IN: ROOMS
+DESC: "Deep Canyon"
+NW: RESERVOIR-SOUTH
+EAST: DAM-ROOM
+SW: NS-PASSAGE
+DOWN: LOUD-ROOM
+FLAGS: ['RLANDBIT']
+ACTION: DEEP-CANYON-F
+GLOBAL: STAIRS
+---

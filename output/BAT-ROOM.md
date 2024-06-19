@@ -1,0 +1,10 @@
+---
+aliases: ['BAT-ROOM', 'Bat Room']
+tags: [room]
+IN: ROOMS
+DESC: "Bat Room"
+SOUTH: SQUEEKY-ROOM
+EAST: SHAFT-ROOM
+ACTION: BATS-ROOM
+FLAGS: ['RLANDBIT', 'SACREDBIT']
+---

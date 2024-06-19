@@ -1,0 +1,10 @@
+---
+aliases: ['CLIFF-MIDDLE', 'Rocky Ledge']
+tags: [room]
+IN: ROOMS
+DESC: "Rocky Ledge"
+UP: CANYON-VIEW
+DOWN: CANYON-BOTTOM
+FLAGS: ['RLANDBIT', 'ONBIT', 'SACREDBIT']
+GLOBAL: CLIMBABLE-CLIFF RIVER
+---

@@ -1,0 +1,10 @@
+---
+aliases: ['DAM-LOBBY', 'Dam Lobby']
+tags: [room]
+IN: ROOMS
+DESC: "Dam Lobby"
+SOUTH: DAM-ROOM
+NORTH: MAINTENANCE-ROOM
+EAST: MAINTENANCE-ROOM
+FLAGS: ['RLANDBIT', 'ONBIT']
+---

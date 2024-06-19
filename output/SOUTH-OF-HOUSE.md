@@ -1,0 +1,14 @@
+---
+aliases: ['SOUTH-OF-HOUSE', 'South of House']
+tags: [room]
+IN: ROOMS
+DESC: "South of House"
+WEST: WEST-OF-HOUSE
+EAST: EAST-OF-HOUSE
+NE: EAST-OF-HOUSE
+NW: WEST-OF-HOUSE
+SOUTH: FOREST-3
+NORTH: "The windows are all boarded."
+FLAGS: ['RLANDBIT', 'ONBIT', 'SACREDBIT']
+GLOBAL: BOARDED-WINDOW BOARD WHITE-HOUSE FOREST
+---

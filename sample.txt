@@ -1,0 +1,29 @@
+
+<OBJECT ADVERTISEMENT
+    (IN MAILBOX)
+    (SYNONYM ADVERTISEMENT LEAFLET BOOKLET MAIL)
+    (ADJECTIVE SMALL)
+    (DESC "leaflet")
+    (FLAGS READBIT TAKEBIT BURNBIT)
+    (LDESC "A small leaflet is on the ground.")
+    (TEXT
+"WELCOME TO ZORK!|
+|
+ZORK is a game of adventure, danger, and low cunning. In it you
+will explore some of the most amazing territory ever seen by mortals.
+No computer should be without one!")
+    (SIZE 2)>
+    
+<ROOM KITCHEN
+      (IN ROOMS)
+      (DESC "Kitchen")
+      (EAST TO EAST-OF-HOUSE IF KITCHEN-WINDOW IS OPEN)
+      (WEST TO LIVING-ROOM)
+      (OUT TO EAST-OF-HOUSE IF KITCHEN-WINDOW IS OPEN)
+      (UP TO ATTIC)
+      (DOWN TO STUDIO IF FALSE-FLAG ELSE
+     "Only Santa Claus climbs down chimneys.")
+      (ACTION KITCHEN-FCN)
+      (FLAGS RLANDBIT ONBIT SACREDBIT)
+      (VALUE 10)
+      (GLOBAL KITCHEN-WINDOW CHIMNEY STAIRS)>

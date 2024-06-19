@@ -1,0 +1,10 @@
+---
+aliases: ['LOWER-SHAFT', 'Drafty Room']
+tags: [room]
+IN: ROOMS
+DESC: "Drafty Room"
+SOUTH: MACHINE-ROOM
+ACTION: NO-OBJS
+FLAGS: ['RLANDBIT', 'SACREDBIT']
+PSEUDO: "CHAIN" CHAIN-PSEUDO"
+---

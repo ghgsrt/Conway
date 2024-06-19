@@ -1,0 +1,11 @@
+---
+aliases: ['WHITE-CLIFFS-NORTH', 'White Cliffs Beach']
+tags: [room]
+IN: ROOMS
+DESC: "White Cliffs Beach"
+SOUTH: WHITE-CLIFFS-SOUTH IF DEFLATE ELSE "The path is too narrow."
+WEST: DAMP-CAVE IF DEFLATE ELSE "The path is too narrow."
+ACTION: WHITE-CLIFFS-FUNCTION
+FLAGS: ['RLANDBIT', 'SACREDBIT']
+GLOBAL: GLOBAL-WATER WHITE-CLIFF RIVER
+---

@@ -1,0 +1,12 @@
+---
+aliases: ['SWORD', 'sword']
+tags: [object]
+IN: LIVING-ROOM
+SYNONYM: ['SWORD', 'ORCRIST', 'GLAMDRING', 'BLADE']
+ADJECTIVE: ['ELVISH', 'OLD', 'ANTIQUE']
+DESC: "sword"
+FLAGS: ['TAKEBIT', 'WEAPONBIT', 'TRYTAKEBIT']
+ACTION: SWORD-FCN
+SIZE: 30
+TVALUE: 0
+---

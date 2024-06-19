@@ -1,0 +1,11 @@
+---
+aliases: ['CYCLOPS', 'cyclops']
+tags: [object]
+IN: CYCLOPS-ROOM
+SYNONYM: ['CYCLOPS', 'MONSTER', 'EYE']
+ADJECTIVE: ['HUNGRY', 'GIANT']
+DESC: "cyclops"
+FLAGS: ['ACTORBIT', 'NDESCBIT', 'TRYTAKEBIT']
+ACTION: CYCLOPS-FCN
+STRENGTH: 10000
+---

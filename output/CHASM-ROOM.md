@@ -1,0 +1,14 @@
+---
+aliases: ['CHASM-ROOM', 'Chasm']
+tags: [room]
+IN: ROOMS
+DESC: "Chasm"
+NE: RESERVOIR-SOUTH
+SW: EW-PASSAGE
+UP: EW-PASSAGE
+SOUTH: NS-PASSAGE
+DOWN: "Are you out of your mind?"
+FLAGS: ['RLANDBIT']
+GLOBAL: CRACK STAIRS
+PSEUDO: "CHASM" CHASM-PSEUDO"
+---

@@ -1,0 +1,14 @@
+---
+aliases: ['CANYON-VIEW', 'Canyon View']
+tags: [room]
+IN: ROOMS
+DESC: "Canyon View"
+EAST: CLIFF-MIDDLE
+DOWN: CLIFF-MIDDLE
+NW: CLEARING
+WEST: FOREST-3
+SOUTH: "Storm-tossed trees block your way."
+FLAGS: ['RLANDBIT', 'ONBIT', 'SACREDBIT']
+GLOBAL: CLIMBABLE-CLIFF RIVER RAINBOW
+ACTION: CANYON-VIEW-F
+---

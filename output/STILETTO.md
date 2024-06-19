@@ -1,0 +1,11 @@
+---
+aliases: ['STILETTO', 'stiletto']
+tags: [object]
+IN: THIEF
+SYNONYM: ['STILETTO']
+ADJECTIVE: ['VICIOUS']
+DESC: "stiletto"
+ACTION: STILETTO-FUNCTION
+FLAGS: ['WEAPONBIT', 'TRYTAKEBIT', 'TAKEBIT', 'NDESCBIT']
+SIZE: 10
+---

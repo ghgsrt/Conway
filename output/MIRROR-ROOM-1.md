@@ -1,0 +1,11 @@
+---
+aliases: ['MIRROR-ROOM-1', 'Mirror Room']
+tags: [room]
+IN: ROOMS
+DESC: "Mirror Room"
+NORTH: COLD-PASSAGE
+WEST: TWISTING-PASSAGE
+EAST: SMALL-CAVE
+ACTION: MIRROR-ROOM
+FLAGS: ['RLANDBIT']
+---

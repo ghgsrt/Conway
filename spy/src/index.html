@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Spy</title>
+		<meta name="description" content="Minimal Alpine.js + HTML setup." />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#fafafa" />
+		<!-- empty favicon -->
+		<link
+			href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII="
+			rel="icon"
+			type="image/x-icon"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+		<script
+			type="module"
+			src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+		></script>
+		<!-- for IE11 support -->
+		<script
+			nomodule
+			src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine-ie11.min.js"
+			defer
+		></script>
+	</head>
+
+	<body>
+		<div
+			id="app"
+			x-data="{ map: _createMap(Array.from({length: 30}, () => Array.from({length: 30}, () => []))) }"
+		>
+			<template x-for="i in 30">
+				<div class="cell-row">
+					<template x-for="j in 30">
+						<div class="cell"></div>
+					</template>
+				</div>
+				<br />
+			</template>
+		</div>
+		<script type="module" src="../js/core/map.js"></script>
+		<script type="module" src="../js/core/objects.js"></script>
+		<script type="module" src="../js/core/status.js"></script>
+    <script>
+      function _createMap(arr) {
+        createMap(arr);
+      }
+    </script>
+	</body>
+</html>

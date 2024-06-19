@@ -1,0 +1,11 @@
+---
+aliases: ['PEDESTAL', 'pedestal']
+tags: [object]
+IN: TORCH-ROOM
+SYNONYM: ['PEDESTAL']
+ADJECTIVE: ['WHITE', 'MARBLE']
+DESC: "pedestal"
+FLAGS: ['NDESCBIT', 'CONTBIT', 'OPENBIT', 'SURFACEBIT']
+ACTION: DUMB-CONTAINER
+CAPACITY: 30
+---

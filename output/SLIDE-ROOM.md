@@ -1,0 +1,11 @@
+---
+aliases: ['SLIDE-ROOM', 'Slide Room']
+tags: [room]
+IN: ROOMS
+DESC: "Slide Room"
+EAST: COLD-PASSAGE
+NORTH: MINE-ENTRANCE
+DOWN: CELLAR
+FLAGS: ['RLANDBIT']
+GLOBAL: SLIDE
+---

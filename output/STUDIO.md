@@ -1,0 +1,13 @@
+---
+aliases: ['STUDIO', 'Studio']
+tags: [room]
+IN: ROOMS
+also: covered with paint
+DESC: "Studio"
+SOUTH: GALLERY
+PER-UP: UP-CHIMNEY-FUNCTION
+UP: PER UP-CHIMNEY-FUNCTION
+FLAGS: ['RLANDBIT']
+GLOBAL: CHIMNEY
+PSEUDO: "DOOR" DOOR-PSEUDO "PAINT" PAINT-PSEUDO"
+---

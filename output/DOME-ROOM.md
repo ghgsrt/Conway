@@ -1,0 +1,10 @@
+---
+aliases: ['DOME-ROOM', 'Dome Room']
+tags: [room]
+IN: ROOMS
+DESC: "Dome Room"
+WEST: ENGRAVINGS-CAVE
+ACTION: DOME-ROOM-FCN
+FLAGS: ['RLANDBIT']
+PSEUDO: "DOME" DOME-PSEUDO"
+---

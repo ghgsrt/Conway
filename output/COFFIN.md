@@ -1,0 +1,13 @@
+---
+aliases: ['COFFIN', 'gold coffin']
+tags: [object]
+IN: EGYPT-ROOM
+SYNONYM: ['COFFIN', 'CASKET', 'TREASURE']
+ADJECTIVE: ['SOLID', 'GOLD']
+DESC: "gold coffin"
+FLAGS: ['TAKEBIT', 'CONTBIT', 'SACREDBIT', 'SEARCHBIT']
+CAPACITY: 35
+SIZE: 55
+VALUE: 10
+TVALUE: 15
+---

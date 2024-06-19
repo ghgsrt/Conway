@@ -1,0 +1,9 @@
+---
+aliases: ['MIRROR-2', 'mirror']
+tags: [object]
+IN: MIRROR-ROOM-2
+SYNONYM: ['REFLECTION', 'MIRROR', 'ENORMOUS']
+DESC: "mirror"
+FLAGS: ['TRYTAKEBIT', 'NDESCBIT']
+ACTION: MIRROR-MIRROR
+---

@@ -1,0 +1,11 @@
+---
+aliases: ['SMELLY-ROOM', 'Smelly Room']
+tags: [room]
+IN: ROOMS
+DESC: "Smelly Room"
+DOWN: GAS-ROOM
+SOUTH: SHAFT-ROOM
+FLAGS: ['RLANDBIT']
+GLOBAL: STAIRS
+PSEUDO: "ODOR" GAS-PSEUDO "GAS" GAS-PSEUDO"
+---

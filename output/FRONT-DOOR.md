@@ -1,0 +1,10 @@
+---
+aliases: ['FRONT-DOOR', 'door']
+tags: [object]
+IN: WEST-OF-HOUSE
+SYNONYM: ['DOOR']
+ADJECTIVE: ['FRONT', 'BOARDED']
+DESC: "door"
+FLAGS: ['DOORBIT', 'NDESCBIT']
+ACTION: FRONT-DOOR-FCN
+---

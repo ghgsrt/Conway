@@ -1,0 +1,10 @@
+---
+aliases: ['SHORE', 'Shore']
+tags: [room]
+IN: ROOMS
+DESC: "Shore"
+NORTH: SANDY-BEACH
+SOUTH: ARAGAIN-FALLS
+FLAGS: ['RLANDBIT', 'SACREDBIT', 'ONBIT']
+GLOBAL: GLOBAL-WATER RIVER
+---

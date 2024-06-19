@@ -1,0 +1,15 @@
+---
+aliases: ['GRATING-CLEARING', 'Clearing']
+tags: [room]
+IN: ROOMS
+DESC: "Clearing"
+NORTH: "The forest becomes impenetrable to the north."
+EAST: FOREST-2
+WEST: FOREST-1
+SOUTH: PATH
+PER-DOWN: GRATING-EXIT
+DOWN: PER GRATING-EXIT
+ACTION: CLEARING-FCN
+FLAGS: ['RLANDBIT', 'ONBIT', 'SACREDBIT']
+GLOBAL: WHITE-HOUSE GRATE
+---

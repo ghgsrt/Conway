@@ -1,0 +1,11 @@
+---
+aliases: ['ENTRANCE-TO-HADES', 'Entrance to Hades']
+tags: [room]
+IN: ROOMS
+DESC: "Entrance to Hades"
+UP: TINY-CAVE
+ACTION: LLD-ROOM
+FLAGS: ['RLANDBIT', 'ONBIT']
+GLOBAL: BODIES
+PSEUDO: "GATE" GATE-PSEUDO "GATES" GATE-PSEUDO"
+---

@@ -1,0 +1,11 @@
+---
+aliases: ['TROPHY-CASE', 'trophy case']
+tags: [object]
+IN: LIVING-ROOM
+SYNONYM: ['CASE']
+ADJECTIVE: ['TROPHY']
+DESC: "trophy case"
+FLAGS: ['TRANSBIT', 'CONTBIT', 'NDESCBIT', 'TRYTAKEBIT', 'SEARCHBIT']
+ACTION: TROPHY-CASE-FCN
+CAPACITY: 10000
+---

@@ -1,0 +1,11 @@
+---
+aliases: ['TROLL', 'troll']
+tags: [object]
+IN: TROLL-ROOM
+SYNONYM: ['TROLL']
+ADJECTIVE: ['NASTY']
+DESC: "troll"
+FLAGS: ['ACTORBIT', 'OPENBIT', 'TRYTAKEBIT']
+ACTION: TROLL-FCN
+STRENGTH: 2
+---

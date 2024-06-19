@@ -1,0 +1,10 @@
+---
+aliases: ['SLIDE', 'chute']
+tags: [object]
+IN: LOCAL-GLOBALS
+SYNONYM: ['CHUTE', 'RAMP', 'SLIDE']
+ADJECTIVE: ['STEEP', 'METAL', 'TWISTING']
+DESC: "chute"
+FLAGS: ['CLIMBBIT']
+ACTION: SLIDE-FUNCTION
+---

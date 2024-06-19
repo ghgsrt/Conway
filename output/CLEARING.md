@@ -1,0 +1,14 @@
+---
+aliases: ['CLEARING', 'Clearing']
+tags: [room]
+IN: ROOMS
+DESC: "Clearing"
+UP: "There is no tree here suitable for climbing."
+EAST: CANYON-VIEW
+NORTH: FOREST-2
+SOUTH: FOREST-3
+WEST: EAST-OF-HOUSE
+ACTION: FOREST-ROOM
+FLAGS: ['RLANDBIT', 'ONBIT', 'SACREDBIT']
+GLOBAL: TREE SONGBIRD WHITE-HOUSE FOREST
+---

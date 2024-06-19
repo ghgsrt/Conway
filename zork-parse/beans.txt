@@ -1,0 +1,174 @@
+Write a function in Rust such that given the following input from a text file zork.txt:
+
+"1DUNGEON for
+	        Zork I: The Great Underground Empire
+	(c) Copyright 1983 Infocom, Inc. All Rights Reserved."
+
+<DIRECTIONS NORTH EAST WEST SOUTH NE NW SE SW UP DOWN IN OUT LAND>
+
+<GLOBAL SCORE-MAX 350>
+
+<GLOBAL FALSE-FLAG <>>
+
+"SUBTITLE OBJECTS"
+
+<OBJECT ADVERTISEMENT
+	(IN MAILBOX)
+	(SYNONYM ADVERTISEMENT LEAFLET BOOKLET MAIL)
+	(ADJECTIVE SMALL)
+	(DESC "leaflet")
+	(FLAGS READBIT TAKEBIT BURNBIT)
+	(LDESC "A small leaflet is on the ground.")
+	(TEXT
+"\"WELCOME TO ZORK!|
+|
+ZORK is a game of adventure, danger, and low cunning. In it you
+will explore some of the most amazing territory ever seen by mortals.
+No computer should be without one!\"")
+	(SIZE 2)>
+
+<OBJECT LEAK
+	(IN MAINTENANCE-ROOM)
+	(SYNONYM LEAK DRIP PIPE)
+	(DESC "leak")
+	(FLAGS NDESCBIT INVISIBLE)
+	(ACTION LEAK-FUNCTION)>
+
+"SUBTITLE CONDITIONAL EXIT FLAGS"
+
+<GLOBAL CYCLOPS-FLAG <>>
+<GLOBAL DEFLATE <>>
+<GLOBAL DOME-FLAG <>>
+<GLOBAL EMPTY-HANDED <>>
+<GLOBAL LLD-FLAG <>>
+<GLOBAL LOW-TIDE <>>
+<GLOBAL MAGIC-FLAG <>>
+<GLOBAL RAINBOW-FLAG <>>
+<GLOBAL TROLL-FLAG <>>
+<GLOBAL WON-FLAG <>>
+<GLOBAL COFFIN-CURE <>>
+
+"SUBTITLE FOREST AND OUTSIDE OF HOUSE"
+
+<ROOM KITCHEN
+      (IN ROOMS)
+      (DESC "Kitchen")
+      (EAST TO EAST-OF-HOUSE IF KITCHEN-WINDOW IS OPEN)
+      (WEST TO LIVING-ROOM)
+      (OUT TO EAST-OF-HOUSE IF KITCHEN-WINDOW IS OPEN)
+      (UP TO ATTIC)
+      (DOWN TO STUDIO IF FALSE-FLAG ELSE
+	 "Only Santa Claus climbs down chimneys.")
+      (ACTION KITCHEN-FCN)
+      (FLAGS RLANDBIT ONBIT SACREDBIT)
+      (VALUE 10)
+      (GLOBAL KITCHEN-WINDOW CHIMNEY STAIRS)>
+
+<ROOM MAZE-2
+      (IN ROOMS)
+      (LDESC "This is part of a maze of twisty little passages, all alike.")
+      (DESC "Maze")
+      (SOUTH TO MAZE-1)
+      (DOWN PER MAZE-DIODES) ;"to MAZE-4"
+      (EAST TO MAZE-3)
+      (FLAGS RLANDBIT MAZEBIT)>
+
+\
+
+;"RANDOM TABLES FOR WALK-AROUND"
+
+<GLOBAL HOUSE-AROUND
+  <LTABLE (PURE) WEST-OF-HOUSE NORTH-OF-HOUSE EAST-OF-HOUSE SOUTH-OF-HOUSE
+	  WEST-OF-HOUSE>>
+
+<GLOBAL FOREST-AROUND
+  <LTABLE (PURE) FOREST-1 FOREST-2 FOREST-3 PATH CLEARING FOREST-1>>
+
+<GLOBAL IN-HOUSE-AROUND
+  <LTABLE (PURE) LIVING-ROOM KITCHEN ATTIC KITCHEN>>
+
+<GLOBAL ABOVE-GROUND
+  <LTABLE (PURE) WEST-OF-HOUSE NORTH-OF-HOUSE EAST-OF-HOUSE SOUTH-OF-HOUSE
+	  FOREST-1 FOREST-2 FOREST-3 PATH CLEARING GRATING-CLEARING
+	  CANYON-VIEW>>
+
+that will generate a series of markdown files for any corresponding <ROOMs and <OBJECTs.
+
+For example, the input I provided above should produce the following files in the following format:
+
+file: "output/zork; ADVERTISEMENT.md"
+body:
+---
+aliases: [ADVERTISEMENT]
+tags: [object]
+IN: MAILBOX
+SYNONYM: [ADVERTISEMENT, LEAFLET, BOOKLET, MAIL]
+ADJECTIVE: [SMALL]
+DESC: leaflet
+FLAGS: [READBIT, TAKEBIT, BURNBIT]
+LDESC: A small leaflet is on the ground.
+TEXT: "WELCOME TO ZORK!<br><br>ZORK is a game of adventure, danger, and low cunning. In it you will explore some of the most amazing territory ever seen by mortals. No computer should be without one!"
+SIZE: 2
+---
+
+file: "output/zork; LEAK.md"
+body:
+---
+aliases: [LEAK]
+tags: [object]
+IN:  MAINTENANCE ROOM
+SYNONYM: [LEAK, DRIP, PIPE]
+DESC: leak
+FLAGS: [NDESCBIT, INVISIBLE]
+ACTION: LEAK-FUNCTION
+---
+
+file: "output/zork; KITCHEN.md"
+body:
+---
+aliases: [KITCHEN]
+tags: [room]
+IN: ROOMS
+DESC: Kitchen
+EAST: EAST-OF-HOUSE IF KITCHEN-WINDOW=OPEN
+WEST: LIVING-ROOM
+OUT: EAST-OF-HOUSE IF KITCHEN-WINDOW=OPEN
+UP: ATTIC
+DOWN: STUDIO IF FALSE-FLAG ELSE "Only Santa Claus climbs down chimneys."
+ACTION: KITCHEN-FCN
+FLAGS: [RLANDBIT, ONBIT, SACREDBIT]
+VALUE: 10
+GLOBAL: [KITCHEN-WINDOW, CHIMNEY, STAIRS]
+---
+
+file: "output/zork; MAZE-2.md"
+body:
+---
+aliases: [MAZE-2]
+tags: [room]
+IN: ROOMS
+LDESC: This is part of a maze of twisty little passages, all alike.
+DESC: Maze
+SOUTH: MAZE-1
+DOWN: MAZE-4
+EAST: MAZE-3
+PER-DOWN: MAZE-DIODES
+FLAGS: [RLANDBIT, MAZEBIT]
+---
+
+Note that some strings may be multiline in the source and should be parsed correctly, attributing the full multiline string to the appropriate property. Also note that occurrences of | in strings should be replaced with <br>. Also note that a direction property with a value containing "PER" in the source file should use the name in the comment proceeding the set of parentheses, e.g., (DOWN PER MAZE-DIODES) ;"to MAZE-4" should create a corresponding property DOWN: MAZE-4. Additionally create a new property PER-[DIR] whose value is the name which proceeded "PER" in the source. So, as an example, in all, given:
+(DOWN PER MAZE-DIODES) ;"to MAZE-4"
+Should produce:
+DOWN: MAZE-4
+PER-DOWN: MAZE-DIODES
+
+You can assume the only case where it is okay to ignore some words within a set of parentheses are directions, as you can see from my provided example earlier which shows the word "TO" having been removed from the source. You can also assume direction properties are the only ones which add words or symbols that did not exist, as you can see from my provided example earlier which shows:
+(EAST TO EAST-OF-HOUSE IF KITCHEN-WINDOW IS OPEN)
+As producing:
+EAST: EAST-OF-HOUSE IF KITCHEN-WINDOW=OPEN
+
+This behavior is consistent. The "IS" should resolve to an "=" as you can see above.
+You can assume that any patterns which emerge from my provided examples are consistent. You should assume that there may be other properties that I have not listed, and those should be handled with the same patterns that emerge from any non-directional properties. Note: directional properties are as follows:
+NORTH EAST WEST SOUTH NE NW SE SW UP DOWN IN OUT LAND
+
+So, to reiterate, provide the code, IN ITS ENTIRETY, which, when given an input text file in the form I have provided, will produce a series of markdown files according to the emergent patterns from the examples and descriptions I have provided. 

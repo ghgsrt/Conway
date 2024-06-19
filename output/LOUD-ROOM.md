@@ -1,0 +1,12 @@
+---
+aliases: ['LOUD-ROOM', 'Loud Room']
+tags: [room]
+IN: ROOMS
+DESC: "Loud Room"
+EAST: DAMP-CAVE
+WEST: ROUND-ROOM
+UP: DEEP-CANYON
+ACTION: LOUD-ROOM-FCN
+FLAGS: ['RLANDBIT']
+GLOBAL: STAIRS
+---

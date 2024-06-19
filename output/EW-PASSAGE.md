@@ -1,0 +1,13 @@
+---
+aliases: ['EW-PASSAGE', 'East-West Passage']
+tags: [room]
+IN: ROOMS
+DESC: "East-West Passage"
+EAST: ROUND-ROOM
+WEST: TROLL-ROOM
+DOWN: CHASM-ROOM
+NORTH: CHASM-ROOM
+FLAGS: ['RLANDBIT']
+VALUE: 5
+GLOBAL: STAIRS
+---

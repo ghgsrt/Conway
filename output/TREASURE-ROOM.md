@@ -1,0 +1,11 @@
+---
+aliases: ['TREASURE-ROOM', 'Treasure Room']
+tags: [room]
+IN: ROOMS
+DESC: "Treasure Room"
+DOWN: CYCLOPS-ROOM
+ACTION: TREASURE-ROOM-FCN
+FLAGS: ['RLANDBIT', ';"CANT-HAVE-ONBIT"']
+VALUE: 25
+GLOBAL: STAIRS
+---

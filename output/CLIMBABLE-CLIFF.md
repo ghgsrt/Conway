@@ -1,0 +1,10 @@
+---
+aliases: ['CLIMBABLE-CLIFF', 'cliff']
+tags: [object]
+IN: LOCAL-GLOBALS
+SYNONYM: ['WALL', 'CLIFF', 'WALLS', 'LEDGE']
+ADJECTIVE: ['ROCKY', 'SHEER']
+DESC: "cliff"
+ACTION: CLIFF-OBJECT
+FLAGS: ['NDESCBIT', 'CLIMBBIT']
+---

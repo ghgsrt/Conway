@@ -1,0 +1,10 @@
+---
+aliases: ['DAM-BASE', 'Dam Base']
+tags: [room]
+IN: ROOMS
+DESC: "Dam Base"
+NORTH: DAM-ROOM
+UP: DAM-ROOM
+FLAGS: ['RLANDBIT', 'ONBIT', 'SACREDBIT']
+GLOBAL: GLOBAL-WATER RIVER
+---
